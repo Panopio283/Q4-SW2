@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professor Kitty's Math</title>
+<style>
+    body {
+        background-image: url('https://i.pinimg.com/originals/6c/82/cf/6c82cf1be6c18e015a1e3727da2e4b43.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        font-family: casual;
+        font-size: 75px;
+        color: #E04378;
+        margin-top: 2px;
+    }
+
+    table {
+        margin-left: 100px;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    img{
+        width: 500px;
+        height:600px;
+        margin-top: 3px;
+    }
+
+    .image-container {
+        float: right;
+        margin-right: 100px;
+    }
+
+    input[type="number"] {
+        border: dashed #A23055;
+        padding: 5px;
+        margin-left: 50px; 
+        width: 300px;
+        background-color: #FFAFCA;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        margin-left: 310px;
+        background-image: url('https://i.pinimg.com/736x/90/6d/f2/906df2e33214c586ec253080a8a847bc.jpg');
+        background-size: cover; 
+        border: none; 
+        width: 150px; 
+        height: 150px; 
+        cursor: pointer;
+    }
+
+    .main {
+        border: 5px dashed #DA134F;
+        padding: 20px; 
+        margin-top: 20px; 
+        margin-left: 130px; 
+        width: 800px;
+        height: 550px;
+        background-image: url('https://i.pinimg.com/564x/dd/3c/6e/dd3c6e709404db0f066124994bf01803.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h3{
+        font-size: 35x;
+        margin-bottom:1px;
+        color: #89082F;
+    }
+
+    h4{
+        font-size: 30px;
+        color: #E04378;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<center><h2>══════Kitty's Math Homework══════</h2></center>
+
+<div class="image-container">
+    <h1>
+        <img src="https://storage.googleapis.com/sticker-prod/IV5rpoykJju78iwgeUFm/14-1.png" alt="Professor Kitty">
+    </h1>
+</div>
+
+<div class="main">
+    <center><h3>Hello Kitty is a burnt-out Highschool student trying to finish her math homework!</h3><br> <h3>Help her by inputing values into the box <3 <3 <3</h3><br> <h3>Click the heart to get the sum, difference, product, and quotient</h3></center>
+    <input type="number" id="num1" placeholder="Input your X value">
+    <input type="number" id="num2" placeholder="Input your Y value">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <table>
+        <tr>
+            <td colspan="2" id="result"></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+function calculate() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    var addition = num1 + num2;
+    var subtraction = num1 - num2;
+    var multiplication = num1 * num2;
+    var division = num1 / num2;
+
+    document.getElementById("result").innerHTML = "<strong>Addition:</strong> " + addition + "<br>" +
+                                                    "<strong>Subtraction:</strong> " + subtraction + "<br>" +
+                                                    "<strong>Multiplication:</strong> " + multiplication + "<br>" +
+                                                    "<strong>Division:</strong> " + division;
+    window.alert('Press OK to continue');
+}
+</script>
+
+</body>
+</html>
